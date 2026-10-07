@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-background: #0b0d10;
+  --color-foreground: #d6dce3;
+  --color-card: #161a20;
+  --color-card-foreground: #d6dce3;
+  --color-popover: #161a20;
+  --color-popover-foreground: #d6dce3;
+  --color-primary: #8fa3b8;
+  --color-primary-foreground: #0b0d10;
+  --color-secondary: #1c2128;
+  --color-secondary-foreground: #d6dce3;
+  --color-muted: #12151a;
+  --color-muted-foreground: #8b95a1;
+  --color-accent: #1c2128;
+  --color-accent-foreground: #d6dce3;
+  --color-destructive: #c45c4a;
+  --color-border: #262c34;
+  --color-input: #262c34;
+  --color-ring: #8fa3b8;
+  --color-ok: #6b8f71;
+  --color-warn: #b08968;
+  --color-alarm: #c45c4a;
+  --color-chart-1: #8fa3b8;
+  --color-chart-2: #6b8f71;
+  --color-chart-3: #b08968;
+  --color-chart-4: #c45c4a;
+  --color-chart-5: #7a8fa3;
+  --color-chart-6: #a8b5c4;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius: 12px;
+
+  --shadow-border: 0 0 0 1px rgb(255 255 255 / 0.08);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  * {
+    border-color: var(--color-border);
+  }
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+  body {
+    font-family: var(--font-sans);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(214 220 227 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(214 220 227 / 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,1 @@
+import{g as e,h as t,m as n,p as r,y as i}from"./viz-Czg3YetK.js";var a=r({chartName:`LineChart`,GraphicalChild:e,axisComponents:[{axisType:`xAxis`,AxisComp:t},{axisType:`yAxis`,AxisComp:n}],formatAxisMap:i});export{a as t};
